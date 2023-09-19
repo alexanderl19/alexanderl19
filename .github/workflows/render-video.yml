@@ -18,6 +18,8 @@ jobs:
       - run: sudo apt update
       - run: sudo apt install ffmpeg
       - uses: pnpm/action-setup@v2
+        with:
+          run_install: false
       - run: |
           cd ./alexanderliu/apps/video-github-profile
           pnpm install --frozen-lockfile --filter apps/video-github-profile
