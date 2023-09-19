@@ -28,7 +28,7 @@ jobs:
           WORKFLOW_INPUT: ${{ toJson(github.event.inputs) }}
       - run: |
           cd ./apps/video-github-profile
-          pnpm run build --props="./input-props.json"
+          pnpm run build --number-of-gif-loops=0 --props="./input-props.json"
       - uses: actions/upload-artifact@v2
         with:
           name: out.gif
