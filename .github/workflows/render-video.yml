@@ -14,15 +14,17 @@ jobs:
           repository: "alexanderl19/alexanderliu"
           token: ${{ secrets.GH_PAT }}
           path: "alexanderl19/alexanderliu"
-      - run: cd ./alexanderl19/alexanderliu/apps/video-github-profile
       - uses: actions/setup-node@main
       - run: sudo apt update
       - run: sudo apt install ffmpeg
       - run: npm i
+        working-directory: alexanderl19/alexanderliu/apps/video-github-profile
+      - run: cd ./alexanderl19/alexanderliu/apps/video-github-profile
       - run: echo $WORKFLOW_INPUT > input-props.json
         env:
           WORKFLOW_INPUT: ${{ toJson(github.event.inputs) }}
       - run: npm run build -- --props="./input-props.json"
+        working-directory: alexanderl19/alexanderliu/apps/video-github-profile
       - uses: actions/upload-artifact@v2
         with:
           name: out.gif
