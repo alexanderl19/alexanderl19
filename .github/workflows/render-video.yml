@@ -17,9 +17,9 @@ jobs:
       - uses: actions/setup-node@main
       - run: sudo apt update
       - run: sudo apt install ffmpeg
-      - run: ls
       - uses: pnpm/action-setup@v2
         with:
+          version: 7
           run_install: false
       - run: |
           cd ./alexanderliu/apps/video-github-profile
