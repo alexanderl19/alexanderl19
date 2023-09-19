@@ -13,7 +13,8 @@ jobs:
         with:
           repository: "alexanderl19/alexanderliu"
           token: ${{ secrets.GH_PAT }}
-          path: "apps/video-github-profile"
+          path: "alexanderl19/alexanderliu"
+      - run: cd ./alexanderl19/alexanderliu/apps/video-github-profile
       - uses: actions/setup-node@main
       - run: sudo apt update
       - run: sudo apt install ffmpeg
