@@ -13,7 +13,7 @@ jobs:
         with:
           repository: "alexanderl19/alexanderliu"
           token: ${{ secrets.GH_PAT }}
-      - uses: actions/setup-node@main
+      - uses: actions/setup-node@v4
       - run: sudo apt update
       - run: sudo apt install ffmpeg
       - uses: pnpm/action-setup@v2
