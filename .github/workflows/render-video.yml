@@ -29,7 +29,7 @@ jobs:
       - run: |
           cd ./apps/video-github-profile
           pnpm run build --props="./input-props.json"
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: out.gif
           path: apps/video-github-profile/out/video.gif
