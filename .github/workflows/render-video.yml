@@ -33,5 +33,4 @@ jobs:
         with:
           name: out.gif
           path: apps/video-github-profile/out/video.gif
-          compression-level: 0
           if-no-files-found: error
